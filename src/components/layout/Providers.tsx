@@ -20,7 +20,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [soundEnabled, setSoundEnabled] = useState(false);
 
   useEffect(() => {
-    const storedTheme = (localStorage.getItem("horsevision:theme") as Theme | null) ?? "dark";
+    const storedTheme = (localStorage.getItem("horsevision:theme:v2") as Theme | null) ?? "dark";
     const storedSound = localStorage.getItem("horsevision:sound") === "on";
     setTheme(storedTheme);
     setSoundEnabled(storedSound);
@@ -29,7 +29,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     document.documentElement.classList.toggle("light", theme === "light");
     document.documentElement.style.colorScheme = theme;
-    localStorage.setItem("horsevision:theme", theme);
+    localStorage.setItem("horsevision:theme:v2", theme);
   }, [theme]);
 
   const toggleTheme = useCallback(() => setTheme((t) => (t === "dark" ? "light" : "dark")), []);

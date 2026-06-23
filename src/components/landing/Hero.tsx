@@ -19,7 +19,14 @@ export function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(20,21,15,0.55) 0%, rgba(20,21,15,0.2) 38%, rgba(20,21,15,0.85) 100%)",
+            "linear-gradient(180deg, rgba(18,19,13,0.62) 0%, rgba(18,19,13,0.28) 30%, rgba(18,19,13,0.86) 78%, rgba(18,19,13,0.96) 100%)",
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(18,19,13,0.7) 0%, rgba(18,19,13,0.25) 45%, transparent 70%)",
         }}
       />
 
@@ -38,6 +45,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.08 }}
           className="mt-5 max-w-3xl font-display text-[clamp(3.4rem,9vw,7rem)] font-medium leading-[0.92] text-[#f6f1e6]"
+          style={{ textShadow: "0 2px 30px rgba(0,0,0,0.65)" }}
         >
           Know the breed.
           <br />
@@ -49,6 +57,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease, delay: 0.16 }}
           className="mt-7 max-w-xl text-lg leading-relaxed text-[#e7e0d0]/85"
+          style={{ textShadow: "0 1px 16px rgba(0,0,0,0.6)" }}
         >
           Upload a photograph and HorseVision identifies the breed in seconds — then reveals the
           exact features that drove the verdict. An explainable, museum-grade study of the horse.
