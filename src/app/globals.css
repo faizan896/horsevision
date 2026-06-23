@@ -41,6 +41,10 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  background-color: var(--bg);
+  color: var(--text);
+  color-scheme: dark;
+  min-height: 100%;
 }
 
 body {
@@ -49,9 +53,10 @@ body {
   font-feature-settings: "ss01", "cv01";
 }
 
-/* Ambient page glow */
+/* Ambient page glow — use background-image so the dark base color is preserved */
 .bg-aurora {
-  background:
+  background-color: var(--bg);
+  background-image:
     radial-gradient(60% 50% at 15% 0%, rgba(217, 98, 43, 0.18), transparent 60%),
     radial-gradient(50% 45% at 90% 10%, rgba(233, 162, 59, 0.14), transparent 60%),
     radial-gradient(70% 60% at 50% 110%, rgba(156, 179, 128, 0.1), transparent 60%);
