@@ -46,7 +46,7 @@ export function ResultView({ result, imageUrl, onReset }: ResultViewProps) {
         </div>
 
         <div className="flex flex-col gap-4">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">
+          <span className="label text-amber">
             Most likely breed
           </span>
           <h1 className="font-display text-display font-semibold leading-none">{primary.name}</h1>

@@ -35,7 +35,7 @@ function CompareInner() {
   return (
     <Container className="py-14">
       <div className="mb-8 flex flex-col gap-2">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">Compare</span>
+        <span className="label text-amber">Compare</span>
         <h1 className="font-display text-h1 font-semibold">Breed vs breed</h1>
         <p className="text-muted">Put any two breeds side by side across the traits that matter.</p>
       </div>

@@ -3,21 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* type */
-  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-sora: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  /* type — native serif + mono, like the reference. No web-font fetch: instant + classy. */
+  --font-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,
+    "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", "Menlo", "Monaco", "Cascadia Mono", "Roboto Mono", monospace;
+  --font-inter: var(--font-serif); /* compat: body is serif */
+  --font-sora: var(--font-serif); /* compat: display is serif */
 
-  /* light editorial — warm paper, ink, restrained oxblood + ochre */
-  --bg: #f3ecdf;
-  --surface: #fbf6ec;
-  --surface-2: #ece1cf;
-  --border: #d8c9b1;
-  --text: #2c2620;
-  --muted: #6f6454;
-  --amber: #a8472e; /* oxblood/rust accent (token name kept for compatibility) */
-  --ember: #b9762a; /* ochre */
+  /* near-white warm paper, warm ink, restrained oxblood */
+  --bg: #fcfbf8;
+  --surface: #ffffff;
+  --surface-2: #f3f0e8;
+  --border: #e6e0d3;
+  --text: #1d1a16;
+  --muted: #8a8175;
+  --amber: #a8472e; /* oxblood accent (token name kept for compatibility) */
+  --ember: #b0682a; /* ochre */
   --sage: #6c7a4f;
-  --ring: rgba(168, 71, 46, 0.32);
+  --ring: rgba(168, 71, 46, 0.3);
 }
 
 .dark {
@@ -83,9 +86,23 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Editorial display refinements */
+/* Monospace small-caps labels — the reference's signature UI type */
+.label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Editorial display refinements — serif headings, tight tracking */
 .font-display {
-  letter-spacing: -0.012em;
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+  font-weight: 600;
 }
 
 .rule {

@@ -77,15 +77,15 @@ export function Hero() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop"
-                alt="Whistlejacket, a rearing chestnut horse, painted by George Stubbs in 1762"
+                alt="A grey horse at a gallop"
                 className="plate-img aspect-[4/5] w-full object-cover"
               />
             </div>
           </div>
 
-          <figcaption className="mt-3 flex items-center justify-between text-xs italic text-muted">
-            <span>“Whistlejacket” · George Stubbs, 1762</span>
-            <span className="not-italic">Arabian / Thoroughbred</span>
+          <figcaption className="mt-3 flex items-center justify-between text-muted">
+            <span className="italic">every horse tells a story</span>
+            <span className="label">plate i</span>
           </figcaption>
 
           <div className="absolute -left-5 top-6 hidden rounded-sm border border-border bg-surface px-4 py-3 shadow-soft sm:block">

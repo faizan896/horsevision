@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <Container className="flex flex-col gap-16 py-14">
       <header className="flex max-w-2xl flex-col gap-3">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">About</span>
+        <span className="label text-amber">About</span>
         <h1 className="font-display text-h1 font-semibold">Breed identification you can interrogate</h1>
         <p className="text-lg text-muted">
           HorseVision pairs computer vision with a transparent, region-by-region explanation. We

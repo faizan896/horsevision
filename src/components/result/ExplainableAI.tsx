@@ -32,7 +32,7 @@ export function ExplainableAI({ importance, notes }: ExplainableAIProps) {
   return (
     <section className="flex flex-col gap-6">
       <div>
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">
+        <span className="label text-amber">
           Explainable AI
         </span>
         <h2 className="mt-1 font-display text-h2 font-semibold">Why this verdict</h2>

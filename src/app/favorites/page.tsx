@@ -16,7 +16,7 @@ export default function FavoritesPage() {
   return (
     <Container className="py-14">
       <div className="mb-8 flex flex-col gap-2">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">Saved</span>
+        <span className="label text-amber">Saved</span>
         <h1 className="font-display text-h1 font-semibold">Your favorites</h1>
         <p className="text-muted">Breeds you&apos;ve hearted, stored on this device.</p>
       </div>

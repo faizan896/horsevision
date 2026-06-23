@@ -13,7 +13,7 @@ export function AccuracyBlock() {
           <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[var(--amber)]/10 blur-3xl" />
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div className="flex flex-col gap-4">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">
+              <span className="label text-amber">
                 Accuracy you can interrogate
               </span>
               <h2 className="font-display text-h2 font-semibold">

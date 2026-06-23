@@ -43,7 +43,7 @@ export default function BreedsPage() {
   return (
     <Container className="py-14">
       <div className="mb-8 flex flex-col gap-2">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">Encyclopedia</span>
+        <span className="label text-amber">Encyclopedia</span>
         <h1 className="font-display text-h1 font-semibold">Breed explorer</h1>
         <p className="text-muted">Search and filter every breed in the HorseVision database.</p>
       </div>

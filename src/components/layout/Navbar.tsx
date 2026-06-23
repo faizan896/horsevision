@@ -57,7 +57,7 @@ export function Navbar({ onSearch }: { onSearch?: () => void }) {
                 key={l.href}
                 href={l.href}
                 className={cn(
-                  "rounded-full px-3.5 py-2 text-sm transition-colors",
+                  "label rounded-full px-3.5 py-2 transition-colors",
                   pathname.startsWith(l.href)
                     ? "text-text"
                     : "text-muted hover:text-text hover:bg-surface-2",

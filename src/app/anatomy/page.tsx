@@ -52,7 +52,7 @@ export default function AnatomyPage() {
   return (
     <Container className="py-14">
       <div className="mb-8 flex flex-col gap-2">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber">Learn</span>
+        <span className="label text-amber">Learn</span>
         <h1 className="font-display text-h1 font-semibold">Horse anatomy</h1>
         <p className="max-w-xl text-muted">
           The same body regions our AI scans. Hover or tap a point to learn what each tells you — a
