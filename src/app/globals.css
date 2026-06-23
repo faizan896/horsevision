@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 :root {
-  /* type — loaded via <link> in layout, with robust system fallback */
+  /* type */
   --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-sora: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sora: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 
-  /* dark, warm — never pure black */
-  --bg: #100c0a;
-  --surface: #1a1411;
-  --surface-2: #241b16;
-  --border: #3a2c23;
-  --text: #f5ede6;
-  --muted: #b7a697;
-  --amber: #e9a23b;
-  --ember: #d9622b;
-  --sage: #9cb380;
-  --ring: rgba(233, 162, 59, 0.4);
+  /* light editorial — warm paper, ink, restrained oxblood + ochre */
+  --bg: #f3ecdf;
+  --surface: #fbf6ec;
+  --surface-2: #ece1cf;
+  --border: #d8c9b1;
+  --text: #2c2620;
+  --muted: #6f6454;
+  --amber: #a8472e; /* oxblood/rust accent (token name kept for compatibility) */
+  --ember: #b9762a; /* ochre */
+  --sage: #6c7a4f;
+  --ring: rgba(168, 71, 46, 0.32);
 }
 
-.light {
-  --bg: #faf6f1;
-  --surface: #ffffff;
-  --surface-2: #f3ebe2;
-  --border: #e7d8c9;
-  --text: #2a201a;
-  --muted: #7a6a5d;
-  --amber: #c47e1f;
-  --ember: #c4501f;
-  --sage: #5f7a44;
-  --ring: rgba(196, 80, 31, 0.35);
+.dark {
+  --bg: #14100d;
+  --surface: #1d1713;
+  --surface-2: #271e17;
+  --border: #3c2e23;
+  --text: #f3ebe0;
+  --muted: #b3a692;
+  --amber: #e0a14a;
+  --ember: #d9742f;
+  --sage: #9cb380;
+  --ring: rgba(224, 161, 74, 0.4);
 }
 
 * {
@@ -43,23 +43,23 @@ html {
   text-rendering: optimizeLegibility;
   background-color: var(--bg);
   color: var(--text);
-  color-scheme: dark;
+  color-scheme: light;
   min-height: 100%;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-feature-settings: "ss01", "cv01";
+  font-feature-settings: "ss01";
 }
 
-/* Ambient page glow — use background-image so the dark base color is preserved */
+/* Ambient page wash — very subtle warm tints on paper */
 .bg-aurora {
   background-color: var(--bg);
   background-image:
-    radial-gradient(60% 50% at 15% 0%, rgba(217, 98, 43, 0.18), transparent 60%),
-    radial-gradient(50% 45% at 90% 10%, rgba(233, 162, 59, 0.14), transparent 60%),
-    radial-gradient(70% 60% at 50% 110%, rgba(156, 179, 128, 0.1), transparent 60%);
+    radial-gradient(60% 40% at 12% 0%, rgba(168, 71, 46, 0.06), transparent 60%),
+    radial-gradient(45% 35% at 92% 4%, rgba(185, 118, 42, 0.06), transparent 60%),
+    radial-gradient(60% 50% at 50% 108%, rgba(108, 122, 79, 0.05), transparent 60%);
 }
 
 .text-gradient {
@@ -70,17 +70,49 @@ body {
 }
 
 .gradient-ember {
-  background-image: linear-gradient(135deg, var(--ember), var(--amber));
+  background-image: linear-gradient(135deg, var(--amber), var(--ember));
 }
 
 .glass {
-  background: color-mix(in srgb, var(--surface) 72%, transparent);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
 }
 
 .tabular {
   font-variant-numeric: tabular-nums;
+}
+
+/* Editorial display refinements */
+.font-display {
+  letter-spacing: -0.012em;
+}
+
+.rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+/* Vintage plate: frame a real photo as an antique print */
+.plate {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 20px 40px -28px rgba(60, 40, 20, 0.5);
+}
+.plate-img {
+  filter: sepia(0.32) saturate(0.82) contrast(1.04) brightness(1.02);
+  mix-blend-mode: multiply;
+}
+.plate::after {
+  /* faint paper grain over the image */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
 }
 
 /* Focus ring */
@@ -90,7 +122,6 @@ body {
   border-radius: 8px;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -121,6 +152,6 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.035;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

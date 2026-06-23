@@ -26,7 +26,7 @@ export function HowItWorks() {
               variants={fadeUp}
               className="relative flex flex-col gap-3 rounded-lg border border-border bg-surface p-6"
             >
-              <span className="grid h-14 w-14 place-items-center rounded-full gradient-ember font-display text-lg font-semibold text-[#1a0f08]">
+              <span className="grid h-14 w-14 place-items-center rounded-full gradient-ember font-display text-lg font-semibold text-[#fbf6ec]">
                 {s.step}
               </span>
               <h3 className="font-display text-lg font-semibold">{s.title}</h3>

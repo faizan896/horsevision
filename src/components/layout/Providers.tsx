@@ -16,18 +16,19 @@ interface AppContextValue {
 const AppContext = createContext<AppContextValue | null>(null);
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
   const [soundEnabled, setSoundEnabled] = useState(false);
 
   useEffect(() => {
-    const storedTheme = (localStorage.getItem("horsevision:theme") as Theme | null) ?? "dark";
+    const storedTheme = (localStorage.getItem("horsevision:theme") as Theme | null) ?? "light";
     const storedSound = localStorage.getItem("horsevision:sound") === "on";
     setTheme(storedTheme);
     setSoundEnabled(storedSound);
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("light", theme === "light");
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.style.colorScheme = theme;
     localStorage.setItem("horsevision:theme", theme);
   }, [theme]);
 

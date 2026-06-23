@@ -44,4 +44,8 @@ export interface Breed {
   regionImportance: RegionImportance;
   /** Tailwind-friendly accent for cards (hex). */
   accent: string;
+  /** Public-domain breed photograph (Wikimedia), shown with a vintage plate treatment. */
+  image: string;
+  /** Optional short credit for the image. */
+  imageCredit?: string;
 }

@@ -23,14 +23,15 @@ export function BreedCard({ breed, index = 0 }: { breed: Breed; index?: number }
       className="group relative overflow-hidden rounded-lg border border-border bg-surface shadow-soft"
     >
       <Link href={`/breeds/${breed.slug}`} className="block">
-        <div
-          className="relative h-40 overflow-hidden"
-          style={{
-            background: `radial-gradient(120% 120% at 70% 10%, ${breed.accent}33, transparent 60%), linear-gradient(160deg, var(--surface-2), var(--surface))`,
-          }}
-        >
-          <BreedGlyph accent={breed.accent} />
-          <div className="absolute left-4 top-4">
+        <div className="plate relative h-48 overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={breed.image}
+            alt={`${breed.name} horse`}
+            loading="lazy"
+            className="plate-img h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute left-3 top-3">
             <Badge tone="outline">{breed.type}</Badge>
           </div>
         </div>
@@ -57,17 +58,5 @@ export function BreedCard({ breed, index = 0 }: { breed: Breed; index?: number }
         </motion.span>
       </button>
     </motion.div>
-  );
-}
-
-function BreedGlyph({ accent }: { accent: string }) {
-  return (
-    <svg viewBox="0 0 200 140" className="absolute inset-0 h-full w-full opacity-70">
-      <path
-        d="M30 120 C 35 96, 42 84, 64 80 C 70 60, 84 48, 110 44 C 114 30, 126 26, 132 38 C 142 32, 154 36, 154 48 C 168 52, 174 68, 166 88 C 160 104, 166 114, 172 124 L 156 124 C 150 108, 144 104, 134 104 C 126 110, 120 118, 120 128 L 106 128 C 108 116, 114 108, 122 104 C 104 108, 80 108, 64 102 C 62 112, 64 122, 70 130 L 56 130 C 50 120, 48 110, 52 100 C 40 96, 34 104, 30 120 Z"
-        fill={accent}
-        opacity="0.35"
-      />
-    </svg>
   );
 }

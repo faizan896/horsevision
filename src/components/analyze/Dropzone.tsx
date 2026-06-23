@@ -78,7 +78,7 @@ export function Dropzone({ onFile }: DropzoneProps) {
       >
         <motion.div
           animate={{ y: dragging ? -6 : 0, scale: dragging ? 1.05 : 1 }}
-          className="grid h-16 w-16 place-items-center rounded-2xl gradient-ember text-[#1a0f08]"
+          className="grid h-16 w-16 place-items-center rounded-2xl gradient-ember text-[#fbf6ec]"
         >
           <UploadCloud className="h-7 w-7" />
         </motion.div>
