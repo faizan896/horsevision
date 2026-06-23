@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Container } from "./Container";
-import { Logo } from "./Logo";
 
 const COLUMNS = [
   {
@@ -27,9 +26,8 @@ export function Footer() {
     <footer className="border-t border-border bg-surface/40">
       <Container className="grid gap-10 py-14 md:grid-cols-[1.5fr_1fr_1fr]">
         <div className="flex flex-col gap-3">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Logo className="h-8 w-8" />
-            <span className="font-display text-lg font-semibold">HorseVision</span>
+          <Link href="/">
+            <span className="font-display text-2xl italic">horsevision.</span>
           </Link>
           <p className="max-w-xs text-sm text-muted">
             AI that identifies horse breeds from a photo — and explains why. A premium,

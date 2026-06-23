@@ -38,7 +38,15 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-aurora noise font-sans antialiased">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-aurora font-sans antialiased">
         <Providers>
           <a
             href="#main"
@@ -46,6 +54,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           >
             Skip to content
           </a>
+          {/* delicate ivory frame around the whole experience */}
+          <div
+            aria-hidden
+            className="pointer-events-none fixed inset-[10px] z-[60] rounded-[18px] border sm:inset-4"
+            style={{ borderColor: "rgba(236,230,216,0.22)" }}
+          />
           <SiteShell>
             <div id="main">{children}</div>
           </SiteShell>

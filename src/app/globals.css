@@ -3,37 +3,39 @@
 @tailwind utilities;
 
 :root {
-  /* type — native serif + mono, like the reference. No web-font fetch: instant + classy. */
-  --font-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,
-    "Times New Roman", serif;
-  --font-mono: ui-monospace, "SF Mono", "Menlo", "Monaco", "Cascadia Mono", "Roboto Mono", monospace;
-  --font-inter: var(--font-serif); /* compat: body is serif */
-  --font-sora: var(--font-serif); /* compat: display is serif */
+  /* type — high-contrast display serif + readable body serif (museum editorial) */
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-body);
+  --font-mono: var(--font-body);
+  --font-inter: var(--font-body); /* compat: body */
+  --font-sora: var(--font-display); /* compat: display */
 
-  /* near-white warm paper, warm ink, restrained oxblood */
+  /* dark cinematic museum — deep warm charcoal, ivory, gold */
+  --bg: #14150f;
+  --surface: rgba(244, 239, 225, 0.05);
+  --surface-2: rgba(244, 239, 225, 0.08);
+  --border: rgba(236, 230, 216, 0.14);
+  --text: #f3eee1;
+  --muted: #aba48f;
+  --amber: #c6a96a; /* warm gold accent (token name kept for compatibility) */
+  --ember: #b98a57; /* bronze */
+  --sage: #93a17e;
+  --ring: rgba(198, 169, 106, 0.4);
+  --ivory: #ece6d8;
+}
+
+.light {
   --bg: #fcfbf8;
   --surface: #ffffff;
   --surface-2: #f3f0e8;
   --border: #e6e0d3;
   --text: #1d1a16;
   --muted: #8a8175;
-  --amber: #a8472e; /* oxblood accent (token name kept for compatibility) */
-  --ember: #b0682a; /* ochre */
+  --amber: #9c6b2e;
+  --ember: #b0682a;
   --sage: #6c7a4f;
-  --ring: rgba(168, 71, 46, 0.3);
-}
-
-.dark {
-  --bg: #14100d;
-  --surface: #1d1713;
-  --surface-2: #271e17;
-  --border: #3c2e23;
-  --text: #f3ebe0;
-  --muted: #b3a692;
-  --amber: #e0a14a;
-  --ember: #d9742f;
-  --sage: #9cb380;
-  --ring: rgba(224, 161, 74, 0.4);
+  --ring: rgba(156, 107, 46, 0.3);
 }
 
 * {
@@ -46,14 +48,15 @@ html {
   text-rendering: optimizeLegibility;
   background-color: var(--bg);
   color: var(--text);
-  color-scheme: light;
+  color-scheme: dark;
   min-height: 100%;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-feature-settings: "ss01";
+  font-family: var(--font-body);
+  font-size: 1.02rem;
 }
 
 /* Flat, calm paper — clean and quiet */
@@ -73,32 +76,32 @@ body {
 }
 
 .glass {
-  background: color-mix(in srgb, var(--surface) 80%, transparent);
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  background: rgba(20, 21, 15, 0.72);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
 }
 
 .tabular {
   font-variant-numeric: tabular-nums;
 }
 
-/* Monospace small-caps labels — the reference's signature UI type */
+/* Letter-spaced caps labels — refined museum nav/kickers */
 .label {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.7rem;
-  font-weight: 400;
+  letter-spacing: 0.26em;
+  font-size: 0.72rem;
+  font-weight: 500;
 }
 .font-mono {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
 }
 
-/* Editorial display refinements — serif headings, tight tracking */
+/* High-contrast display serif (Cormorant) */
 .font-display {
-  font-family: var(--font-serif);
-  letter-spacing: -0.015em;
-  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 .rule {

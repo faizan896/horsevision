@@ -9,7 +9,6 @@ import { Container } from "./Container";
 import { useApp } from "./Providers";
 import { LinkButton } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import { Logo } from "./Logo";
 
 const LINKS = [
   { href: "/breeds", label: "Breeds" },
@@ -46,9 +45,8 @@ export function Navbar({ onSearch }: { onSearch?: () => void }) {
         )}
       >
         <Container className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5" aria-label="HorseVision home">
-            <Logo className="h-8 w-8" />
-            <span className="font-display text-lg font-semibold tracking-tight">HorseVision</span>
+          <Link href="/" aria-label="HorseVision home">
+            <span className="font-display text-2xl italic text-text">horsevision.</span>
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex">

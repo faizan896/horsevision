@@ -8,82 +8,65 @@ import { ease } from "@/lib/motion";
 
 export function Hero() {
   return (
-    <section className="relative pt-24 pb-28 sm:pt-32 sm:pb-36">
-      <Container className="grid items-center gap-16 lg:grid-cols-[1fr_0.85fr] lg:gap-20">
-        <div className="flex flex-col items-start gap-7">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease }}
-            className="font-display text-lg italic text-amber"
-          >
-            equine intelligence, explained
-          </motion.p>
+    <section className="relative flex min-h-[92vh] items-end overflow-hidden">
+      {/* full-bleed cinematic photograph */}
+      <img
+        src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop"
+        alt="A pale horse at a gallop in dark woodland"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,21,15,0.55) 0%, rgba(20,21,15,0.2) 38%, rgba(20,21,15,0.85) 100%)",
+        }}
+      />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.05 }}
-            className="font-display text-display font-semibold leading-[0.98]"
-          >
-            Know the breed.
-            <br />
-            <span className="italic text-amber">See the reason.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.12 }}
-            className="max-w-md text-lg leading-relaxed text-muted"
-          >
-            Upload a photograph and HorseVision identifies the breed in seconds — then shows you the
-            exact features that drove the verdict. Made for owners, vets, breeders and enthusiasts.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.2 }}
-            className="flex flex-wrap items-center gap-3 pt-2"
-          >
-            <LinkButton href="/analyze" size="lg">
-              Identify a horse <ArrowRight className="h-4 w-4" />
-            </LinkButton>
-            <LinkButton href="/breeds" size="lg" variant="outline">
-              Explore breeds
-            </LinkButton>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="label text-muted"
-          >
-            no sign-up · works on mobile · free to try
-          </motion.p>
-        </div>
-
-        <motion.figure
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease }}
-          className="mx-auto w-full max-w-sm"
+      <Container className="relative z-10 pb-24 pt-40 sm:pb-28">
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease }}
+          className="label text-[var(--ivory)]/80"
         >
-          <div className="plate overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop"
-              alt="A grey horse at a gallop"
-              className="plate-img aspect-[4/5] w-full object-cover"
-            />
-          </div>
+          ethereal spirits of the plains
+        </motion.p>
 
-          <figcaption className="mt-4 flex items-center justify-between text-muted">
-            <span className="italic">every horse tells a story</span>
-            <span className="label">plate i</span>
-          </figcaption>
-        </motion.figure>
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease, delay: 0.08 }}
+          className="mt-5 max-w-3xl font-display text-[clamp(3.4rem,9vw,7rem)] font-medium leading-[0.92] text-[#f6f1e6]"
+        >
+          Know the breed.
+          <br />
+          <span className="italic">See the reason.</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: 0.16 }}
+          className="mt-7 max-w-xl text-lg leading-relaxed text-[#e7e0d0]/85"
+        >
+          Upload a photograph and HorseVision identifies the breed in seconds — then reveals the
+          exact features that drove the verdict. An explainable, museum-grade study of the horse.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: 0.24 }}
+          className="mt-10 flex flex-wrap items-center gap-4"
+        >
+          <LinkButton href="/analyze" size="lg">
+            Begin a reading <ArrowRight className="h-4 w-4" />
+          </LinkButton>
+          <LinkButton href="/breeds" size="lg" variant="outline">
+            Enter the archive
+          </LinkButton>
+        </motion.div>
       </Container>
     </section>
   );
