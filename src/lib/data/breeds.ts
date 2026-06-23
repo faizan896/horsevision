@@ -36,7 +36,7 @@ export const BREEDS: Breed[] = [
     related: ["akhal-teke", "thoroughbred", "andalusian"],
     regionImportance: { head: 95, eyes: 78, neck: 84, chest: 60, body: 66, legs: 72, tail: 70 },
     accent: "#a8472e",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/5/54/Halterstandingshotarabianone.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1566068256639-2f046b164a98?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "thoroughbred",
@@ -68,7 +68,7 @@ export const BREEDS: Breed[] = [
     related: ["arabian", "warmblood", "quarter-horse"],
     regionImportance: { head: 64, eyes: 60, neck: 78, chest: 82, body: 80, legs: 92, tail: 55 },
     accent: "#b9762a",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/3/36/Applebite-Gentlemen.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1573751056139-2ab65b6b03be?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "friesian",
@@ -100,7 +100,7 @@ export const BREEDS: Breed[] = [
     related: ["andalusian", "lipizzaner", "clydesdale"],
     regionImportance: { head: 70, eyes: 58, neck: 88, chest: 74, body: 72, legs: 90, tail: 86 },
     accent: "#4a4036",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/7/7c/Friesian_Horse_Side_View_3.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1547763818-7826370c0b59?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "andalusian",
@@ -132,7 +132,7 @@ export const BREEDS: Breed[] = [
     related: ["lipizzaner", "friesian", "arabian"],
     regionImportance: { head: 74, eyes: 64, neck: 90, chest: 78, body: 76, legs: 70, tail: 80 },
     accent: "#6c7a4f",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/5/57/Andalusian.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1553284966-19b8815c7817?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "akhal-teke",
@@ -164,7 +164,7 @@ export const BREEDS: Breed[] = [
     related: ["arabian", "thoroughbred", "andalusian"],
     regionImportance: { head: 80, eyes: 70, neck: 86, chest: 66, body: 78, legs: 84, tail: 62 },
     accent: "#c08a2e",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/8/83/Dagat-Geli.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1504310977373-186d29f99322?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "appaloosa",
@@ -196,7 +196,7 @@ export const BREEDS: Breed[] = [
     related: ["quarter-horse", "mustang", "thoroughbred"],
     regionImportance: { head: 72, eyes: 86, neck: 60, chest: 64, body: 96, legs: 70, tail: 58 },
     accent: "#9a7d3a",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/9/9b/THIEL_619.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "clydesdale",
@@ -228,7 +228,7 @@ export const BREEDS: Breed[] = [
     related: ["shire", "friesian", "mustang"],
     regionImportance: { head: 62, eyes: 50, neck: 70, chest: 88, body: 84, legs: 96, tail: 60 },
     accent: "#8a5a22",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/6/6e/Clydesdale_horse_by_Bonnie_Gruenberg.JPG&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1603989888581-3115416784fa?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "shire",
@@ -260,7 +260,7 @@ export const BREEDS: Breed[] = [
     related: ["clydesdale", "friesian"],
     regionImportance: { head: 60, eyes: 48, neck: 68, chest: 90, body: 86, legs: 98, tail: 56 },
     accent: "#7a6a45",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/e/e2/Aa_shirehorse.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1536356953159-9043c2260bba?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "mustang",
@@ -292,7 +292,7 @@ export const BREEDS: Breed[] = [
     related: ["quarter-horse", "appaloosa", "arabian"],
     regionImportance: { head: 66, eyes: 60, neck: 64, chest: 70, body: 74, legs: 88, tail: 62 },
     accent: "#955434",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/d/de/Mustanggelding.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1606107869722-d5cbadabe2f0?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "quarter-horse",
@@ -324,7 +324,7 @@ export const BREEDS: Breed[] = [
     related: ["thoroughbred", "appaloosa", "mustang"],
     regionImportance: { head: 64, eyes: 56, neck: 66, chest: 86, body: 90, legs: 84, tail: 54 },
     accent: "#a86a30",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/0/06/Roan.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1514861889637-9f51bc99fc19?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "shetland-pony",
@@ -356,7 +356,7 @@ export const BREEDS: Breed[] = [
     related: ["mustang", "quarter-horse"],
     regionImportance: { head: 70, eyes: 58, neck: 60, chest: 72, body: 80, legs: 64, tail: 66 },
     accent: "#6f5e48",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/7/78/289-o-Galant-SWE-71-SH-03.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1508951454813-7b08b8aba51f?w=900&q=80&auto=format&fit=crop",
   },
   {
     slug: "lipizzaner",
@@ -388,7 +388,7 @@ export const BREEDS: Breed[] = [
     related: ["andalusian", "friesian", "arabian"],
     regionImportance: { head: 72, eyes: 62, neck: 92, chest: 80, body: 78, legs: 74, tail: 76 },
     accent: "#8c8a86",
-    image: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/8/8a/Lipizzaner_Conversano_Traviata.jpg&w=1000&output=webp&q=82",
+    image: "https://images.unsplash.com/photo-1553284965-fa61e9ad4795?w=900&q=80&auto=format&fit=crop",
   },
 ];
 

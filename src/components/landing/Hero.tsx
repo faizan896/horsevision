@@ -76,7 +76,7 @@ export function Hero() {
             <div className="overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/6/60/Whistlejacket_by_George_Stubbs_edit.jpg&w=900&output=webp&q=82"
+                src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop"
                 alt="Whistlejacket, a rearing chestnut horse, painted by George Stubbs in 1762"
                 className="plate-img aspect-[4/5] w-full object-cover"
               />
