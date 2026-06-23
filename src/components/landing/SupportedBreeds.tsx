@@ -11,7 +11,7 @@ export function SupportedBreeds() {
   const row = [...breeds, ...breeds]; // duplicate for seamless marquee
 
   return (
-    <section className="py-24">
+    <section className="py-32">
       <Container className="flex flex-col gap-10">
         <SectionHeading
           eyebrow="Supported breeds"

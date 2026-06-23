@@ -7,7 +7,7 @@ import { SUPPORTED_STATS } from "@/lib/data/content";
 
 export function AccuracyBlock() {
   return (
-    <section className="py-24">
+    <section className="py-32">
       <Container>
         <Reveal className="relative overflow-hidden rounded-xl border border-border bg-surface p-10 shadow-soft sm:p-14">
           <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[var(--amber)]/10 blur-3xl" />

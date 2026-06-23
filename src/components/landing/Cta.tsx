@@ -7,7 +7,7 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export function Cta() {
   return (
-    <section className="py-24">
+    <section className="py-32">
       <Container>
         <Reveal className="relative overflow-hidden rounded-xl border border-border p-12 text-center shadow-soft sm:p-16">
           <div className="absolute inset-0 -z-10 gradient-ember opacity-[0.14]" />

@@ -66,7 +66,7 @@ export default function AnalyzePage() {
 
         {state.phase === "error" && (
           <motion.div key="error" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <Container className="py-24">
+            <Container className="py-32">
               <div className="mx-auto flex max-w-md flex-col items-center gap-4 text-center">
                 <span className="grid h-14 w-14 place-items-center rounded-full bg-[var(--ember)]/15 text-ember">
                   <AlertTriangle className="h-6 w-6" />

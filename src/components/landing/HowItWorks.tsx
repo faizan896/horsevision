@@ -8,7 +8,7 @@ import { fadeUp, stagger } from "@/lib/motion";
 
 export function HowItWorks() {
   return (
-    <section className="py-24">
+    <section className="py-32">
       <Container className="flex flex-col gap-12">
         <SectionHeading eyebrow="How it works" title="From photo to explained verdict in three steps" />
 

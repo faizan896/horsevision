@@ -13,7 +13,7 @@ const base =
   "relative inline-flex items-center justify-center gap-2 rounded-pill font-medium transition-colors select-none disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
-  primary: "gradient-ember text-[#fbf6ec] shadow-glow hover:brightness-[1.06]",
+  primary: "bg-amber text-[#fcfbf8] hover:brightness-110",
   secondary: "bg-surface-2 text-text border border-border hover:bg-surface",
   ghost: "text-muted hover:text-text hover:bg-surface-2",
   outline: "border border-border text-text hover:border-amber hover:text-amber",

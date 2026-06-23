@@ -8,7 +8,7 @@ import { stagger, fadeUp } from "@/lib/motion";
 
 export function FeatureGrid() {
   return (
-    <section className="py-24">
+    <section className="py-32">
       <Container className="flex flex-col gap-12">
         <SectionHeading
           eyebrow="Why HorseVision"

@@ -8,9 +8,9 @@ import { ease } from "@/lib/motion";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-20 sm:pt-24">
-      <Container className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="flex flex-col items-start gap-6">
+    <section className="relative pt-24 pb-28 sm:pt-32 sm:pb-36">
+      <Container className="grid items-center gap-16 lg:grid-cols-[1fr_0.85fr] lg:gap-20">
+        <div className="flex flex-col items-start gap-7">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export function Hero() {
           >
             Know the breed.
             <br />
-            <span className="italic text-gradient">See the reason.</span>
+            <span className="italic text-amber">See the reason.</span>
           </motion.h1>
 
           <motion.p
@@ -45,7 +45,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.2 }}
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-wrap items-center gap-3 pt-2"
           >
             <LinkButton href="/analyze" size="lg">
               Identify a horse <ArrowRight className="h-4 w-4" />
@@ -59,43 +59,30 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-sm text-muted"
+            className="label text-muted"
           >
-            No sign-up · Works on mobile · Free to try
+            no sign-up · works on mobile · free to try
           </motion.p>
         </div>
 
-        {/* Vintage plate hero — Whistlejacket, George Stubbs, 1762 (public domain) */}
         <motion.figure
-          initial={{ opacity: 0, scale: 0.97 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease }}
-          className="relative mx-auto w-full max-w-sm"
+          className="mx-auto w-full max-w-sm"
         >
-          <div className="plate overflow-hidden rounded-sm p-3">
-            <div className="overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop"
-                alt="A grey horse at a gallop"
-                className="plate-img aspect-[4/5] w-full object-cover"
-              />
-            </div>
+          <div className="plate overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop"
+              alt="A grey horse at a gallop"
+              className="plate-img aspect-[4/5] w-full object-cover"
+            />
           </div>
 
-          <figcaption className="mt-3 flex items-center justify-between text-muted">
+          <figcaption className="mt-4 flex items-center justify-between text-muted">
             <span className="italic">every horse tells a story</span>
             <span className="label">plate i</span>
           </figcaption>
-
-          <div className="absolute -left-5 top-6 hidden rounded-sm border border-border bg-surface px-4 py-3 shadow-soft sm:block">
-            <p className="text-xs text-muted">Predicted breed</p>
-            <p className="font-display text-base font-semibold">Arabian · 93%</p>
-          </div>
-          <div className="absolute -right-4 bottom-16 hidden rounded-sm border border-border bg-surface px-4 py-3 shadow-soft sm:block">
-            <p className="text-xs text-muted">Face importance</p>
-            <p className="font-display text-base font-semibold text-amber">95%</p>
-          </div>
         </motion.figure>
       </Container>
     </section>
