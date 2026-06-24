@@ -1,4 +1,4 @@
-# 🐴 HorseVision
+#  HorseVision
 
 AI that identifies horse breeds from a photo — and **explains why**. A premium,
 dark-by-default, mobile-first product built with Next.js 15, TypeScript, Tailwind
