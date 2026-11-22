@@ -11,11 +11,16 @@ import { getAllBreeds, getBreed } from "@/lib/data/breeds";
 import type { Breed } from "@/lib/data/breeds.types";
 import { formatHands, formatKg, formatYears } from "@/lib/utils";
 
+function knownSlug(slug: string | null, fallback: string) {
+  return slug && getBreed(slug) ? slug : fallback;
+}
+
 function CompareInner() {
   const params = useSearchParams();
   const breeds = getAllBreeds();
-  const [a, setA] = useState(params.get("a") ?? "arabian");
-  const [b, setB] = useState(params.get("b") ?? "friesian");
+  // A slug from the URL that matches no breed falls back to the default pair.
+  const [a, setA] = useState(() => knownSlug(params.get("a"), "arabian"));
+  const [b, setB] = useState(() => knownSlug(params.get("b"), "friesian"));
 
   const ba = getBreed(a)!;
   const bb = getBreed(b)!;

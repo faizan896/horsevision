@@ -1,7 +1,7 @@
 import type { RegionImportance } from "@/lib/data/breeds.types";
 
 export interface AnalyzeInput {
-  /** object URL or data URL of the image, used for hashing in the mock */
+  /** stable identity of the image file, used for hashing in the mock */
   imageKey: string;
   fileName?: string;
 }
