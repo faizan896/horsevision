@@ -9,6 +9,8 @@ export type AnalysisPhase = "idle" | "preview" | "analyzing" | "result" | "error
 export interface AnalysisState {
   phase: AnalysisPhase;
   imageUrl: string | null;
+  /** identifies the file itself; the object URL is different on every upload */
+  imageKey: string | null;
   fileName: string | null;
   progress: number;
   stepIndex: number;
@@ -20,6 +22,7 @@ export interface AnalysisState {
 const initial: AnalysisState = {
   phase: "idle",
   imageUrl: null,
+  imageKey: null,
   fileName: null,
   progress: 0,
   stepIndex: 0,
@@ -34,7 +37,8 @@ export function useAnalysis() {
 
   const setImage = useCallback((file: File) => {
     const url = URL.createObjectURL(file);
-    setState({ ...initial, phase: "preview", imageUrl: url, fileName: file.name });
+    const imageKey = `${file.name}:${file.size}:${file.lastModified}`;
+    setState({ ...initial, phase: "preview", imageUrl: url, imageKey, fileName: file.name });
   }, []);
 
   const clearImage = useCallback(() => {
@@ -55,7 +59,7 @@ export function useAnalysis() {
     abortRef.current = controller;
 
     try {
-      const imageKey = `${stateRef.current.imageUrl ?? ""}`;
+      const imageKey = stateRef.current.imageKey ?? "";
       const result = await analyzeImage(
         { imageKey, fileName: stateRef.current.fileName ?? undefined },
         {
